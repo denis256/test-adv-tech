@@ -1,8 +1,8 @@
+# Deployment specific variables and configurations
 
 image:
   repository: denis256/test-adv-tech
-  tag: "61d8fd5"
-
+  tag: "b86e3fd"
 
 resources:
   limits:
@@ -11,3 +11,6 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
+
+service:
+  type: NodePort

@@ -69,6 +69,15 @@ helm -n adv-tech ls
 kubectl -n  adv-tech  get pods 
 ```
 
+Access application through node port:
+```
+export NODE_PORT=$(kubectl get --namespace adv-tech -o jsonpath="{.spec.ports[0].nodePort}" services adv-tech-app-test-adv-tech)
+export NODE_IP=$(kubectl get nodes --namespace adv-tech -o jsonpath="{.items[0].status.addresses[0].address}")
+
+curl -v http://$NODE_IP:$NODE_PORT/request
+
+```
+
 Uninstall app
 ```
 helm -n adv-tech  uninstall adv-tech-app
