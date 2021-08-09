@@ -1,16 +1,15 @@
 # Test project for deployment of HTTP service in K8S
 
+## Tech stack
 
-# Tech stack
-
-Go 1.16
-Makefile
-Docker
-Kubernetes 1.18
-Helm 3
+* Go 1.16
+* Makefile
+* Docker
+* Kubernetes 1.18
+* Helm 3
 
 
-# Dev run
+## Dev run
 
 ```
 go run main.go
@@ -22,8 +21,7 @@ curl -v http://localhost:10000
 curl -v http://localhost:10000/request
 ```
 
-
-# Build
+## Build
 
 ```
 make build
@@ -34,7 +32,7 @@ Binary execution:
 ./test-adv-tech
 ```
 
-# Container 
+## Container 
 
 To build container with application run
 ```
@@ -49,7 +47,7 @@ Example local execution
 docker run -p 10000:10000 denis256/test-adv-tech:61d8fd5
 ```
 
-# Kubernetes deployment
+## Kubernetes deployment
 
 To deploy application in K8S, use helm charts, directory `helm`
 
@@ -78,17 +76,17 @@ curl -v http://$NODE_IP:$NODE_PORT/request
 
 ```
 
-Uninstall app
+Uninstall app:
 ```
 helm -n adv-tech  uninstall adv-tech-app
 ```
 
-# Future work
+## Future work
 
 * CI/CD pipeline for auotmated building
 * Basic tests and collection of test coverage
 * Automated build and deployment with tools like ansible/terraform
 
-# License
+## License
 
 Only for reference
