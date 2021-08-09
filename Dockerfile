@@ -3,6 +3,8 @@ RUN mkdir -p /go/src/test-adv-tech
 ADD . /go/src/test-adv-tech
 WORKDIR /go/src/test-adv-tech
 RUN go env -w GO111MODULE=on
+ENV GOOS=linux
+ENV CGO_ENABLED=0
 RUN go mod download
 RUN go mod tidy
 RUN go mod vendor

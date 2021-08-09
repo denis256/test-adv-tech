@@ -9,5 +9,5 @@ build:
 	go build
 
 container:
-	docker build . -t test-adv-tech:$(shell git rev-parse --short HEAD)
-	docker push test-adv-tech:$(shell git rev-parse --short HEAD)
+	docker build . -t denis256/test-adv-tech:$(shell git rev-parse --short HEAD)
+	docker push denis256/test-adv-tech:$(shell git rev-parse --short HEAD)
