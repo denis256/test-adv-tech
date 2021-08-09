@@ -89,3 +89,6 @@ helm -n adv-tech  uninstall adv-tech-app
 * Basic tests and collection of test coverage
 * Automated build and deployment with tools like ansible/terraform
 
+# License
+
+Only for reference
