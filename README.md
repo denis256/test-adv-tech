@@ -32,3 +32,16 @@ Binary execution:
 ./test-adv-tech
 ```
 
+# Container 
+To build container with application run
+```
+make container
+```
+It will build build container tagged from current git commit hash
+
+
+# Future work
+
+* CI/CD pipeline for auotmated building
+* Basic tests and collection of test coverage
+

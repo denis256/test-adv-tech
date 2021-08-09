@@ -17,7 +17,7 @@ func main() {
 	router.HandleFunc("/", root)
 	router.HandleFunc("/request", request)
 
-	log.Fatal(http.ListenAndServe(":10000", router))
+	log.Fatal(http.ListenAndServe(":"+getenv("LISTEN_PORT", "10000"), router))
 }
 
 func root(w http.ResponseWriter, r *http.Request) {
